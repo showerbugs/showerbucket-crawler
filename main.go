@@ -2,9 +2,9 @@ package main
 
 import (
 	"fmt"
-	"github.com/badoux/goscraper"
 	"net/http"
 	"encoding/json"
+	"github.com/badoux/goscraper"
 )
 
 type PREVIEW struct {
@@ -23,5 +23,5 @@ func getPreview(w http.ResponseWriter, r *http.Request) {
 
 func main() {
 	http.HandleFunc("/", getPreview)
-	http.ListenAndServe(":18088", nil)
+	http.ListenAndServe(":9090", nil)
 }
