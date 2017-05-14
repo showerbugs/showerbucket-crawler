@@ -3,7 +3,7 @@ version: '3.0'
 services:
   showerbucket-crawler:
     image: showerbucket-crawler
-    container_name: showerbucker-crawler
+    container_name: showerbucket-crawler
     ports:
       - '9090:9090'
     volumes:
