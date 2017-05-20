@@ -4,15 +4,14 @@ import (
     "fmt"
     "net/http"
     "encoding/json"
-    "github.com/badoux/goscraper"
+    "./crawl"
 )
 
 func getPreview(w http.ResponseWriter, r *http.Request) {
     url := r.URL.Query().Get("url")
 
-    s, err := goscraper.Scrape(url, 5)
+    s, err := crawl.Scrape(url, 5)
     if err != nil {
-        fmt.Println(err)
         return
     }
 
